@@ -36,4 +36,11 @@ public class InMemoryCache implements CacheInterface {
     public List<Entry> getAll() {
         return new ArrayList<Entry>(inMemoryMap.values());
     }
+    
+    // delete method implementation
+    
+    @Override
+    public Entry delete(Long key) {
+        return inMemoryMap.remove(key);
+    }
 }
